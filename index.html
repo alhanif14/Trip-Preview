@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website Landing Page - With Background Video Slider | Travel</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">Travel Idea</a>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="5.mp4" autoplay muted loop></video>
+      <div class="content active">
+        <h1>Wonderful.<br><span>Island</span></h1>
+        <p>A visit to a wonderful beach offers a perfect blend of relaxation and adventure. The golden sands invite you to unwind and soak up the sun, while the gentle waves create a soothing soundtrack. The crystal-clear waters are ideal for swimming, allowing you to cool off and enjoy the sea. For the more adventurous, activities such as snorkeling and beach volleyball provide endless fun. The stunning sunsets paint the sky in hues of orange and pink, creating a picturesque backdrop. </p>
+      </div>
+      <div class="content">
+        <h1>Jakarta.<br><span>City</span></h1>
+        <p>Jakarta City is a bustling metropolis known for its vibrant culture and rich history. The city offers a mix of modern skyscrapers and historic sites, such as the National Monument and Kota Tua. Enjoy the diverse culinary scene, featuring everything from street food to fine dining. Explore bustling markets like Tanah Abang and enjoy the lively nightlife in areas like Kemang and SCBD. With its dynamic atmosphere and endless attractions, Jakarta City has something for everyone.</p>
+      </div>
+      <div class="content">
+        <h1>Adventures.<br><span>Off Road</span></h1>
+        <p>The adventure of offroad driving offers an exhilarating escape into nature's wild and rugged terrains. Whether navigating through dense forests, climbing steep hills, or crossing vast deserts, offroading provides a thrilling experience unlike any other. Feel the adrenaline rush as you tackle challenging trails and overcome obstacles with your vehicle. Enjoy breathtaking landscapes, from rocky mountain paths to muddy river crossings. </p>
+      </div>
+      <div class="content">
+        <h1>Trip To.<br><span>Jungle</span></h1>
+        <p>A trip to the jungle offers an immersive adventure into nature’s lush and vibrant heart. Trek through dense foliage, listen to the symphony of wildlife, and discover exotic plants and animals in their natural habitat. Experience the thrill of crossing rivers, navigating trails, and spotting hidden waterfalls. The jungle’s rich biodiversity provides endless opportunities for exploration and discovery. Whether you’re hiking, bird watching, a trip to the jungle promises an unforgettable adventure filled with awe and wonder.</p>
+      </div>
+      <div class="content">
+        <h1>Waterfall.<br><span>Trip</span></h1>
+        <p>Embark on a waterfall trip and immerse yourself in the breathtaking beauty of cascading waters. Follow winding paths through lush forests, listening to the soothing sounds of nature as you approach these majestic natural wonders. Feel the mist on your skin as you stand in awe of the sheer power and grace of the waterfalls. Whether you're chasing hidden gems or visiting famous cascades, a waterfall trip is an invigorating journey that rejuvenates the soul and creates unforgettable memories.</p>
+      </div>
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+    <script>
+      const btns = document.querySelectorAll(".nav-btn"); 
+      const slides = document.querySelectorAll(".video-slide");
+      const contents = document.querySelectorAll(".content");
+
+var sliderNav = function(manual){
+  btns.forEach((btn) => {
+   btn.classList.remove("active");
+});
+
+slides.forEach((slide) => {
+slide.classList.remove("active");
+});
+
+contents.forEach((content) => {
+content.classList.remove("active"); });
+btns[manual].classList.add("active");
+slides[manual].classList.add("active"); contents[manual].classList.add("active"); }
+btns.forEach((btn, i) => {
+btn.addEventListener("click", () => {
+sliderNav(i);
+});
+});
+    </script>
+  </body>
+</html>
